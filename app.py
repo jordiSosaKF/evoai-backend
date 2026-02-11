@@ -46,70 +46,90 @@ class UserData(BaseModel):
 
 # --- 3. BASE DE DATOS DE RUTINAS (TUS RUTINAS PRO) ---
 RUTINAS = {
-    # PRINCIPIANTE (Cluster 0)
+    # -----------------------------------------------------
+    # CLUSTER 0: PRINCIPIANTES -> FULL BODY
+    # -----------------------------------------------------
     0: {
         "id_rutina": "rut_fullbody_01",
         "nombre": "Full Body: Cimientos",
         "nivel": "Principiante",
         "objetivo_principal": "Adaptación anatómica y técnica",
-        "frecuencia_sugerida": "3 días por semana",
-        "descripcion": "Rutina de cuerpo completo para dominar los patrones básicos. Ideal para ganar fuerza inicial.",
+        "frecuencia_sugerida": "3 días por semana (dejando 1 día de descanso)",
+        "descripcion": "Rutina de cuerpo completo para dominar los patrones de movimiento básicos. Ideal para ganar fuerza inicial.",
         "ejercicios": [
-            "1. Sentadilla Globet (Copa) - 3x12",
-            "2. Press de Banca con Mancuernas - 3x12",
-            "3. Jalón al Pecho (Polea Alta) - 3x12",
-            "4. Press Militar Sentado - 3x10",
-            "5. Peso Muerto Rumano con Mancuernas - 3x12",
-            "6. Plancha Abdominal - 3 series al fallo"
+            "1. Sentadilla Globet (Copa) - 3x12 (Cuádriceps)",
+            "2. Press de Banca con Mancuernas - 3x12 (Pecho)",
+            "3. Jalón al Pecho (Polea Alta) - 3x12 (Espalda)",
+            "4. Press Militar Sentado - 3x10 (Hombros)",
+            "5. Peso Muerto Rumano con Mancuernas - 3x12 (Isquios)",
+            "6. Plancha Abdominal - 3 series al fallo técnico"
         ]
     },
-    # INTERMEDIO (Cluster 1)
+    # -----------------------------------------------------
+    # CLUSTER 1: INTERMEDIOS -> PUSH / PULL / LEGS (PPL)
+    # -----------------------------------------------------
     1: {
         "id_rutina": "rut_ppl_01",
         "nombre": "Push / Pull / Legs",
         "nivel": "Intermedio",
         "objetivo_principal": "Hipertrofia y Simetría",
-        "frecuencia_sugerida": "4 a 5 días por semana",
-        "descripcion": "División clásica moderna. Agrupa músculos por función biomecánica.",
+        "frecuencia_sugerida": "4 a 6 días por semana (Frecuencia variable)",
+        "descripcion": "División clásica moderna. Agrupa músculos que trabajan juntos: Empuje (Pecho/Hombro/Tríceps), Tracción (Espalda/Bíceps) y Pierna.",
         "ejercicios": [
-            "--- DÍA PUSH (Empuje) ---",
-            "1. Press Inclinado Barra - 4x10",
-            "2. Press Militar - 4x10",
-            "3. Fondos - 3x12",
-            "4. Elev. Laterales - 3x15",
-            "--- DÍA PULL (Tracción) ---",
-            "1. Dominadas - 4x8",
-            "2. Remo Barra - 4x10",
-            "3. Curl Bíceps - 3x12",
-            "--- DÍA LEGS (Pierna) ---",
-            "1. Sentadilla - 4x8",
-            "2. Peso Muerto Rumano - 4x10",
-            "3. Prensa - 3x12"
+            "--- SESIÓN A: PUSH (Empuje) ---",
+            "1. Press Inclinado con Barra - 4x8-10",
+            "2. Press Militar con Barra (De pie) - 4x8-10",
+            "3. Fondos en Paralelas (Dips) - 3x12",
+            "4. Elevaciones Laterales - 3x15",
+            "5. Extensiones de Tríceps en Polea - 3x15",
+            "--- SESIÓN B: PULL (Tracción) ---",
+            "1. Dominadas (o Jalón al pecho) - 4x8-10",
+            "2. Remo con Barra - 4x10",
+            "3. Face Pulls - 3x15 (Salud Hombro)",
+            "4. Curl de Bíceps con Barra Z - 3x12",
+            "5. Curl Martillo - 3x12",
+            "--- SESIÓN C: LEGS (Pierna) ---",
+            "1. Sentadilla Libre (High Bar) - 4x6-8",
+            "2. Prensa de Piernas - 3x12",
+            "3. Peso Muerto Rumano - 4x10",
+            "4. Extensiones de Cuádriceps - 3x15",
+            "5. Elevación de Talones (Pantorrilla) - 4x20"
         ]
     },
-    # AVANZADO (Cluster 2)
+    # -----------------------------------------------------
+    # CLUSTER 2: AVANZADOS -> ARNOLD SPLIT
+    # -----------------------------------------------------
     2: {
         "id_rutina": "rut_arnold_01",
         "nombre": "Arnold Split (Élite)",
         "nivel": "Avanzado",
         "objetivo_principal": "Volumen Máximo y Puntos Débiles",
-        "frecuencia_sugerida": "6 días por semana",
-        "descripcion": "La división de la vieja escuela para máximo volumen. Pecho+Espalda, Hombro+Brazo, Pierna.",
+        "frecuencia_sugerida": "6 días por semana (Alta Intensidad)",
+        "descripcion": "La división favorita de Schwarzenegger. Agrupa Pecho con Espalda (antagonistas) y Hombro con Brazos. Permite especializar el torso.",
         "ejercicios": [
             "--- DÍA 1: PECHO Y ESPALDA ---",
-            "1. Press Banca (Fuerza) - 5x5",
+            "1. Press Banca Plano (Fuerza) - 5x5",
             "2. Dominadas Lastradas - 4x8",
-            "3. Superserie: Inclinado + Remo - 4x10",
+            "3. Superserie: Press Inclinado + Remo con Mancuerna - 4x10",
+            "4. Aperturas (Flyes) con Mancuernas - 3x15",
+            "5. Pullover (Serratos/Dorsal) - 3x15",
             "--- DÍA 2: HOMBROS Y BRAZOS ---",
-            "1. Press Militar - 4x8",
-            "2. Superserie: Curl Barra + Press Francés - 4x10",
+            "1. Press Militar sentado - 4x8",
+            "2. Elevaciones Laterales - 4x15",
+            "3. Superserie: Curl con Barra + Press Francés - 4x10",
+            "4. Superserie: Curl Predicador + Extensión Copa - 3x12",
+            "5. Curl de Muñeca (Antebrazo) - 3x20",
             "--- DÍA 3: PIERNA COMPLETA ---",
-            "1. Sentadilla Hack - 4x10",
-            "2. Peso Muerto - 3x5",
-            "3. Zancadas - 3x12"
+            "1. Sentadilla Frontal o Hack - 4x10",
+            "2. Peso Muerto Convencional - 3x5 (Pesado)",
+            "3. Zancadas Búlgaras - 3x12 por pierna",
+            "4. Curl Femoral Tumbado - 4x15",
+            "5. Gemelo en máquina Costurera - 4x15"
         ]
     }
 }
+
+
 
 @app.get("/")
 def home():
